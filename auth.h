@@ -194,6 +194,8 @@ char	*authorized_principals_file(struct passwd *);
 FILE	*auth_openkeyfile(const char *, struct passwd *, int);
 FILE	*auth_openprincipals(const char *, struct passwd *, int);
 int	 auth_key_is_revoked(struct sshkey *);
+int	 check_authkeys_file(struct ssh *, struct passwd *, FILE *,
+	    char *, struct sshkey *, struct sshauthopt **);
 
 const char	*auth_get_canonical_hostname(struct ssh *, int);
 
